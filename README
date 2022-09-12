@@ -1,0 +1,18 @@
+I chose python because it's easy to write but I haven't used it recently and wanted to see how
+the type hinting features felt to use
+I prefer statically typed languages and try to follow functional programming best practices
+
+INSTRUCTIONS:
+This script requires at least Python v3.10
+Calling make from the command line will run the script on the default example data
+A different logfile can be specified with:
+    make logfile=<filename>
+The tests can be ran with
+    make test
+
+ASSUMPTIONS:
+The regex used to extract the IPs and enpoints from the log entries is very basic, it assumes a rigid log format
+The ipaddress module that is parsing the IPs considers double zeros (e.g. 50.112.00.11) to be invalid
+The logfile passed through the command line can be either a filename in the same directory or an absolute path
+The relevant stats could be computed more efficiently in a single pass of the logfile but I have
+tried to write the code such that it could be easily expanded to allow for more elaborate analysis on logfiles
